@@ -1,0 +1,174 @@
+ body {
+ 	background: #fff !important;
+ }
+ /*头部的一些样式*/
+.mui-title{
+	color: #2DBBFA;
+}
+.mui-bar-nav{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border-bottom: 1px solid #2DBBFA;
+	background-color: #fff;
+	color: #2DBBFA; 
+}
+ #checkBtn,#selectWeidu{
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 50px;
+	height: 100%;
+	font-size: 14px;
+	line-height: 44px;
+}
+ #checkBtn{
+	right: 65px;
+	text-align: center;
+}
+#selectWeidu{
+	right: 15px;
+	text-align: right;
+}
+.arrow-color{
+	color: #2DBBFA;
+}
+/*导航栏的一些样式*/
+nav.mui-nav{
+	position: fixed;
+	top: 44px;
+	left: 0;
+	background-color: #fff;
+	font-size: 0;
+	width: 100%;
+	z-index: 99;
+}
+.navWraper{
+	width: 100%;
+	height: 44px;
+	padding-left: 15px;
+	border-bottom: 1px solid #F7F7F7;
+}
+.navItem{
+	color: #999;
+	font-size: 13px;
+	height: 100%;
+	float: left;
+	line-height: 43px;
+	list-style: none;
+}
+.navArrow{
+	width: 25px;
+	height: 100%;
+	background: url(../img/rightarrow@2x.png) no-repeat center;
+    background-size: 8px 15px;
+    float: left;
+}
+@media  (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+    .navArrow{
+        background: url("../img/rightarrow@3x.png") no-repeat center;
+        background-size: 8px 15px;
+    }
+}
+ .navActive{
+	color: #2DBBFA;
+	border-bottom: 2px solid #2DBBFA;
+}
+/*mcontent内容的样式*/
+.checkIconWraper{
+	width: 24px;
+	height: 22px;
+	position: absolute;
+	top: 10px;
+	right: 9px;
+	z-index: 9;
+}
+.checkIconWraper>i{
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: url("../img/pickerDate@2x.png") no-repeat center;
+	background-size: 24px 22px;
+}
+@media  (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+    .checkIconWraper>i{
+       	background: url("../img/pickerDate@3x.png") no-repeat center;
+		background-size: 24px 22px;
+    }
+}
+/*图表下面的列表的样式*/
+#list-container{
+	width: 100%;
+	background: #fff;
+}
+.list-wraper{
+	width: 100%;
+	font-size: 0;
+	padding-left: 15px;
+}
+.listItem{
+	height: 54px;
+	width: 100%;
+	font-size: 15px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #F7F7F7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#list-wraper .listItem:first-child{
+	border-top: 1px solid #F7F7F7;
+}
+.circleContainer{
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+}
+.detailMesg{
+	margin-left: 12px;
+	width: 40%;
+	height: 100%;
+	line-height: 52px;
+	color: #8E8E93;
+	text-align: left;
+}
+.percentageContainer{
+	width: 10%;
+	height: 100%;
+	line-height: 52px;
+	color: #BCC0C8;
+	text-align: right; 
+}
+.moneyContainer{
+	flex: 1;
+	text-align: right;
+	line-height: 52px;
+	color: #151515;
+}
+i.mui-icon.mui-icon-forward {
+    color: #999;
+    width: 30px;
+    height: 100%;
+    line-height: 51px;
+}
+
+/*重置一些样式*/
+.mui-bar-nav~.mui-content{
+	padding-top: 88px;
+	background: #fff;
+}
+.mui-scroll{
+	z-index: 99;
+}
+/*公共样式*/
+.backgroundColor_activity{
+	background-color: #E8704E;
+}
+.backgroundColor_everyday{
+	background-color: #24BDB6;
+}
+.backgroundColor_common{
+	background-color: #7C77B9;
+}
+.backgroundColor_NC{
+	background-color:#5EC8E7;
+}

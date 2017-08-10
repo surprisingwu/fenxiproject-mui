@@ -1,0 +1,66 @@
+/*头部的一些样式*/
+header h1{
+    color: #2DBBFA !important;
+}
+.mui-bar-nav{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-bottom: 1px solid #2DBBFA;
+    background-color: #fff;
+    color: #2DBBFA;
+}
+header a{
+    color: #2DBBFA;
+}
+span.checkOperation {
+    float: right;
+    width: 50px;
+    font-size: 14px;
+    line-height: 43px;
+    text-align: center;
+}
+/*内容部分*/
+.mui-table-view-chevron .mui-table-view-cell{
+    padding-right: 0;
+    height: 70px;
+    display: flex;
+}
+.listItemTop,.listItemBottom {
+    display: flex;
+    justify-content: center;
+}
+.listItemLef{
+    flex: 1;
+}
+i.mui-icon.mui-icon-forward {
+    width: 30px;
+    color: #999;
+    line-height: 48px;
+}
+.listItemBottom{
+    margin-top: 5px;
+}
+span.listItemBottom-left {
+    font-size: 15px;
+    color: #333;
+    width: 50%;
+    text-align: left;
+}
+span.listItemBottom-right {
+    width: 50%;
+    text-align: right;
+    font-size: 13px;
+    color: #2DBBFA;
+}
+span.listItemTop-left {
+    width: 50%;
+    text-align: left;
+    font-size: 15px;
+    color: #333;
+}
+span.listItemTop-right {
+    font-size: 13px;
+    color: #999;
+    flex: 1;
+    text-align: right;
+}

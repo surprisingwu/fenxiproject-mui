@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/search.css"/>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav page2-header">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id="checkArrow"></a>
+		    <div class="searchBlock">
+            <i class="searchIcon"></i>
+            <input type="text" class="searchInput" placeholder="搜索关键字">
+            <i class="delateIcon" style="display: none"></i>
+        </div>
+        <span class="cancelBtn">取消</span>
+		</header>
+		<div class="mui-content mui-scroll-wrapper" id="pullrefresh">
+			<div id="content2" class="mui-scroll">
+				<div id="content1" style="display: block;">
+					<div class="keywordsContainer" style="display: block">
+						<div class="keywordsTitle">
+							<span class="keywordsTitleSpan">搜索历史</span>
+						</div>
+						<div class="keywordsContent">
+							<ul class="keywordsListWraper">
+								<li class="keywordsListItem">
+									<span class="keywordsListText">费用</span>
+								</li>
+								<li class="keywordsListItem">
+									<span class="keywordsListText">交通</span>
+								</li>
+								<li class="keywordsListItem">
+									<span class="keywordsListText">报销单</span>
+								</li>
+								<li class="keywordsListItem">
+									<span class="keywordsListText">月</span>
+								</li>
+								<li class="keywordsListItem">
+									<span class="keywordsListText">市场</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="empty-div mui-table-view mui-table-view-chevron">
+					<ul class="mui-table-view" id="listsContainer">
+				</ul>
+				</div>
+				
+			</div>
+		      
+		</div>	
+	</body>
+	<script src="../js/summer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/appsetting.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/search.js" type="text/javascript" charset="utf-8"></script>
+</html>

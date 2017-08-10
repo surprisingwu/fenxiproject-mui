@@ -1,0 +1,148 @@
+ body {
+ 	background: #fff !important;
+ }
+
+/*搜索页面的一些样式*/
+ .mui-bar{
+	padding-left: 10px;
+}
+.mui-bar-nav{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border-bottom: 1px solid #2DBBFA;
+	background: #fff;
+}
+.page2-header a{
+	color: #2DBBFA;
+}
+.searchBlock {
+    position: relative;
+    height: 30px;
+    margin-top: 7px;
+    margin-left: 40px;
+    margin-right: 50px;
+}
+.searchIcon{
+	position: absolute;
+	width: 36px;
+	height: 100%;
+	left:0;
+	background: url(../img/SearchIcon@2x.png) no-repeat center center;
+	background-size: 16px 16px;
+}
+.searchBlock .searchInput{
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	padding-left: 36px;
+	background-color: #F2F2F2;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	padding-right: 36px;
+	color: #999;
+}
+.delateIcon{
+	position: absolute;
+	width: 36px;
+	height: 100%;
+	top: 0;
+	right: 0;
+	background: url(../img/deleteIcon@2x.png) no-repeat center center;
+	background-size: 16px 16px;
+}
+input::-webkit-input-placeholder{
+	color: #999;
+}
+.cancelBtn{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50px;
+	height: 100%;
+	font-size: 14px;
+	color: #2DBBFA;
+	text-align: center;
+	line-height: 44px;
+}
+/*搜索页面中间内容部分*/
+.keywordsContainer{
+	width: 100%;
+}
+.keywordsTitleSpan{
+
+}
+.keywordsContent{
+
+}
+.keywordsTitle{
+	padding-top: 18px;
+	padding-left: 15px;
+	font-size: 13px;
+	color: #666;
+}
+ .mui-content{
+	background: #fff;
+}
+.keywordsListWraper{
+	width: 100%;
+	display: flex;
+	font-size: 12px;
+	flex-flow: row wrap;
+  	align-content: flex-start;
+	padding-left: 15px;
+	padding-right: 5px;
+	color: #666;
+}
+
+.keywordsListItem{	
+	flex: 0 0 25%;
+	height: 32px;
+	line-height: 32px;
+	padding-right: 10px;
+	margin-top: 10px;
+	list-style: none;
+}
+.keywordsListText{
+	display: inline-block;
+	font-size: 12px;
+	text-align: center;
+	border-radius: 4px;
+	background-color: #F1F1F1;
+	width: 100%;
+}
+
+
+/*搜索列表页面*/
+li.mui-table-view-cell{
+	display: flex;
+	justify-content: start;
+	font-size: 15px;
+}
+i.mui-icon.mui-icon-search {
+    color: #2DBBFA;
+}
+span.search-detail-mesg {
+    width: 40%;
+    font-size: 15px;
+    color: #8E8E93;
+    margin-left: 14px;
+}
+span.search-total-money{
+	text-align: right;
+    flex: 1;
+    margin-right: 5px;
+}
+i.mui-icon.mui-icon-forward{
+	color: #999;
+	line-height: 18px;
+}
+.mui-table-view-chevron .mui-table-view-cell{
+	padding-right: 0;
+}
+
+ /*.mui-table-view:after,*/
+ /*.mui-table-view:before{*/
+	 /*height: 0;*/
+ /*}*/
