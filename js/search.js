@@ -47,11 +47,12 @@ summerready = function () {
         var inputValue = $(".searchBlock .searchInput").val().trim();
         if (inputValue === "") {
             $(".searchBlock .delateIcon").hide();
+            $("#listsContainer").html("");
             return;
         }
         $("#content1").hide();
-        mui('#pullrefresh').pullRefresh().refresh(true);
         lastInputVal = inputValue;
+        $("#listsContainer").html("");
         callActionData({
         	inputValue: inputValue,
         	pageIndex: 1
@@ -62,7 +63,9 @@ summerready = function () {
         $(".searchBlock .delateIcon").show();
     })
     mui(".keywordsListWraper").on("tap","li",function () {
-        var listName = $(this).text()
+        var listName = $(this).text().trim();
+        $(".searchBlock .searchInput").val(listName);
+        $(".searchBlock .delateIcon").show();
         $("#content1").hide();
         callActionData({
             inputValue: listName,
@@ -75,7 +78,6 @@ summerready = function () {
         $(".searchBlock .searchInput").val("");
         $("#listsContainer").html("");
         $("#content1").show();
-        mui('#pullrefresh').pullRefresh().disablePullupToRefresh();
     })
 mui("#listsContainer").on("tap","li",function(){
 	var data = $(this).attr("name");
@@ -128,7 +130,7 @@ mui("#listsContainer").on("tap","li",function(){
         }
     }
 })
-//开始  禁用下拉刷新
+//渲染返回的数据
 function renderList(data){
 	var htmlStr = "";
 	var listsContainer = $("#listsContainer");
@@ -145,6 +147,7 @@ function renderNoneMesg(){
 	var htmlStr = '<li class="mui-table-view-cell">没有查询到相关的数据！</li>';
 	var listsContainer = $("#listsContainer");
 }
+//  调取后台的数据
 function callActionData(options){
 	var inputValue = options.inputValue||lastInputVal;
 	var pageIndex = options.pageIndex || 1;
@@ -179,6 +182,11 @@ function callActionData(options){
                 return;
             }
             var data = data.datas;
+            if (data.length >= 10){
+                mui('#pullrefresh').pullRefresh().enablePullupToRefresh();
+            }else {
+                mui('#pullrefresh').pullRefresh().disablePullupToRefresh();
+            }
             if (_self) {
                     _self.endPullupToRefresh(false)
             }

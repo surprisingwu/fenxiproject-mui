@@ -233,46 +233,21 @@ var dataColor = [
         background: "backgroundColor_NC"
     },
     {
-        color: "#5EC8E7",
-        background: "backgroundColor_NC"
+        color: "#5EE794",
+        background: "backgroundColor_5"
     },
     {
-        color: "#5EC8E7",
-        background: "backgroundColor_NC"
+        color: "#E7d05E",
+        background: "backgroundColor_6"
     },
     {
-        color: "#5EC8E7",
-        background: "backgroundColor_NC"
+        color: "#5E99E7",
+        background: "backgroundColor_7"
     },
     {
-        color: "#5EC8E7",
-        background: "backgroundColor_NC"
+        color: "#E75E95",
+        background: "backgroundColor_8"
     },
-    {
-        color: "#5EC8E7",
-        background: "backgroundColor_NC"
-    },
-    {
-        color: "#5EC8E7",
-        background: "backgroundColor_NC"
-    }, {
-        color: "#5EC8E7",
-        background: "backgroundColor_NC"
-    },
-    {
-        color: "#5EC8E7",
-        background: "backgroundColor_NC"
-    },
-    {
-        color: "#5EC8E7",
-        background: "backgroundColor_NC"
-    },
-    {
-        color: "#5EC8E7",
-        background: "backgroundColor_NC"
-    },
-
-
 ]
 function initLocal() {
     localStorage.removeItem("resultData")

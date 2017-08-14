@@ -40,7 +40,7 @@ summerready = function(){
                 begindate: begindate,
                 enddate: enddate,
                 dimsmap: dimsmap,
-                currdim: "",
+                currdim: null,
                 matstr: "",
                 pageSize: 10,
                 pageIndex: pageIndex,
@@ -56,6 +56,11 @@ summerready = function(){
                 return;
             }
             var data = data.datas;
+            if (data.length >= 10){
+                mui('#pullrefresh').pullRefresh().enablePullupToRefresh();
+            }else {
+                mui('#pullrefresh').pullRefresh().disablePullupToRefresh();
+            }
             if (_self) {
                 _self.endPullupToRefresh(false)
             }
