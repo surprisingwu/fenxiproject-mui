@@ -7,18 +7,19 @@
 		'.sel-boxs{display:none;}' +
 		'.sel-boxs .bg{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:998;}' +
 		'.sel-box{position:fixed;bottom:0;left:0;right:0;z-index:999;}' +
-		'.sel-box #btn{background:#fda626;overflow:hidden;}' +
-		'.sel-box .btn1{overflow:hidden;width:22px;height:22px;float:left;margin-top:11px;}' +
-		'.sel-box .btn1 img{float:left;width:100%;height:100%;}' +
-		'.sel-box .ok{float:right;margin-right:12px}' +
-		'.sel-box .cancel{margin-left:12px}' +
-		'.sel-box .name{color:white;text-align:center;line-height:22px;font-size:18px;padding:11px 0;}' +
+		'.sel-box #btn{background:#fff;height: 40px;overflow:hidden;}' +
+		'.sel-box .btn1{overflow:hidden;width:50px;height:100%;float:left;text-align: center;line-height: 40px}' +
+		'.sel-box .ok{float:right;}' +
+		'.sel-box .okText{font-size: 14px;color: #00A0E8;display: inline-block;height: 100%;}' +
+		'.sel-box .cancel{float: left}' +
+		'.sel-box .cancelText{font-size: 14px;color: #999}' +
+		'.sel-box .name{color:#333;text-align:center;line-height:40px;font-size:16px;}' +
 		'.sel-con{background:white;}' +
-		'.sel-con .border{height:34px;border:solid 1px #fda626;border-width:1px 0;position:fixed;bottom:72px;left:0;right:0;}' +
+		'.sel-con .border{height:34px;border:solid 1px #EEE;border-width:1px 0;position:absolute;bottom:72px;left:0;right:0;}' +
 		'.sel-con .table{display:table;width:100%;table-layout:fixed;}' +
 		'.sel-con .cell{display:table-cell;vertical-align:middle;text-align:center;overflow:hidden;}' +
 		'.sel-con .scroll{-webkit-overflow-scrolling:touch;height:180px;overflow:auto;box-sizing:border-box;padding:75px 0;width:200%;padding-right:100%;position: relative;}' +
-		'.sel-con .ele{font-size:16px;color:#b2b2b2;height:36px;line-height:36px;}' +
+		'.sel-con .ele{font-size:16px;color:#333;height:36px;line-height:36px;}' +
 		'@-webkit-keyframes fadeInUp {from {opacity: 0;-webkit-transform: translate3d(0, 100%, 0);transform: translate3d(0, 100%, 0);}to {opacity: 1;-webkit-transform: none;transform: none;}}' +
 		'@keyframes fadeInUp {from {opacity: 0;-webkit-transform: translate3d(0, 100%, 0);transform: translate3d(0, 100%, 0);} to {opacity: 1;-webkit-transform: none;transform: none;}}' +
 		'.fadeInUp {-webkit-animation-name: fadeInUp;animation-name: fadeInUp;}' +
@@ -31,8 +32,8 @@
 		'   <div class="bg"></div>' +
 		'   <div class="sel-box animated fadeInUp">' +
 		'       <div id="btn">' +
-		'           <div class="btn1 ok"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAhFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8g2+bRAAAAK3RSTlMAR/fu0fuGIwupFQcC8uPXxr+6j1lR2k2yl5VfhFNEMGTn37CfP8ikenEcAN6KmwAAAcRJREFUOMullYmSgjAQRCEEERBQPMBrvfd6//9/C4sGYoJb1E6VZRjacY5Oj/NkY3d0yTwhvOwycsfOK3NDQcdE6PZCl7LBeHI6lV5zlksrNMipLJ0XUfMcFfO09uSBiV0kwMyddH0TdwYki2fsDli9mTHeVsBO922AdWzLLl7Xr7qeEfjbvrq3Pow6+VbYpdPfpQqt8g4SOL5q/xGSR09ylVRrRkn5/V9gFb8Gxyto8pTQM9VDuH/wAOT9e9YT70z6OM+aiGFv4E+4OG3osOKkIJ1YsVGCH6jJp4hx/ZO5PfBVezMHtx5eYa8OTh32F/UYS4is4Kk+qQhKJ8OzYhfwrtXikVUfacOOU7hpHllFFUxt4B18PKclesCBQHwbYC2NQ/l1P4XwqdwqDa3AK6x/i7rBWbWtLVBrXeFDGFfjktBQSG+dPpRCQD52ji239KHo474l8B6c8A+trx33M5EOJxD6zWmJZFA0OAOeKkOjqEn+7wy+1JNOfvNaRR/X2BAmkEMu7F5JweZvKeiIzPYVdluLzBD5Gi6MreRu7JL7q8bDxHz4mjAXkPtYQK5aQDbb21bb/t9Ls13HZeb5vpeV5jr+ARdfPT/feckoAAAAAElFTkSuQmCC" alt="确定"></div>' +
-		'           <div class="btn1 cancel"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAflBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////vroaSAAAAKXRSTlMAR3Vx7fjY0vyWhlIK8r+7qVkVB+MixrJgTRqRjoQk3Mewb2IQDOUsKwWQsecAAAGYSURBVDjLlZWJbsIwDECd0YvSUsZNYWzj2Pb+/wcXpUDamkN5EkKVn1IncW3pUZj8O4niOEq+c1PIM8wkpkU8MQ/VUYojSr++0ghHOrqrLiosP9vNVBzTzXaOpVpo970ExqaX1hgo3/vuB5B41esJ8CEdhsBwJneYuZC0yCFbywPWGeStfK07koeMrH3Le1HCUZ5whPJ6JlUvKc0QqstbIJk9l2cJNHmmYOQFBtLL/9jXUd1W/vzTuFlx0lq4+MwO3n2jrFtLT2w8Zn4L1xkMvAu/t9CcuBADO7kxwNreffORLRjJYSPKVq5sIJcVTEXZypUprCQhElG2ckUiEvtLRdvalZRIYpaibe3KkljLTb4M7sk2De06W6ehN+j25napNuiOTrn+vDtH5y5Fu9p2l6Kv27radtfdLaSFd52d1Z1C6pboKWqf7yH7LNol2i/+U6dX1UWn+EM+q6APNqgV+CazfuauodyHtK+QxhjYcsObefiYsOwrLPOduQ4gs2sG0P7FaFsu1WgLHJqas8lXzThe5ebcC/4DShk9Lfj6+QIAAAAASUVORK5CYII=" alt="取消"></div>' +
+		'           <div class="btn1 ok"><span class="okText">确定</span></div>' +
+		'           <div class="btn1 cancel"><span class="cancelText">取消</span></div>' +
 		'           <div class="name">加载中...</div>' +
 		'       </div>' +
 		'       <div class="sel-con">' +

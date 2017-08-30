@@ -71,14 +71,21 @@ input::-webkit-input-placeholder{
 	width: 100%;
 }
 .keywordsTitleSpan{
-
+	padding: 6px 0;
+	float: left;
 }
 .keywordsContent{
 
 }
+span.clear-search-history {
+	padding: 6px 0;
+    float: right;
+    text-align: right;
+    width: 50px;
+    color: red;
+}
 .keywordsTitle{
-	padding-top: 18px;
-	padding-left: 15px;
+	padding: 10px 15px 0;
 	font-size: 13px;
 	color: #666;
 }
@@ -88,9 +95,12 @@ input::-webkit-input-placeholder{
 .keywordsListWraper{
 	width: 100%;
 	display: flex;
+	display: -webkit-flex;
 	font-size: 12px;
 	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
   	align-content: flex-start;
+	-webkit-align-content: flex-start;
 	padding-left: 15px;
 	padding-right: 5px;
 	color: #666;
@@ -98,11 +108,15 @@ input::-webkit-input-placeholder{
 
 .keywordsListItem{	
 	flex: 0 0 25%;
+	-webkit-flex: 0 0 25%;
 	height: 32px;
 	line-height: 32px;
 	padding-right: 10px;
 	margin-top: 10px;
 	list-style: none;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
 }
 .keywordsListText{
 	display: inline-block;
@@ -117,7 +131,9 @@ input::-webkit-input-placeholder{
 /*搜索列表页面*/
 li.mui-table-view-cell{
 	display: flex;
-	justify-content: start;
+	display: -webkit-flex;
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
 	font-size: 15px;
 }
 i.mui-icon.mui-icon-search {
@@ -132,6 +148,7 @@ span.search-detail-mesg {
 span.search-total-money{
 	text-align: right;
     flex: 1;
+    -webkit-flex: 1;
     margin-right: 5px;
 }
 i.mui-icon.mui-icon-forward{

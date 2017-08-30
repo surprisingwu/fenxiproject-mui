@@ -89,7 +89,7 @@ nav.mui-nav{
 	background: url("../img/pickerDate@2x.png") no-repeat center;
 	background-size: 24px 22px;
 }
-@media  (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+@media  (-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
     .checkIconWraper>i{
        	background: url("../img/pickerDate@3x.png") no-repeat center;
 		background-size: 24px 22px;
@@ -112,8 +112,11 @@ nav.mui-nav{
 	box-sizing: border-box;
 	border-bottom: 1px solid #F7F7F7;
 	display: flex;
+	display: -webkit-flex;
 	align-items: center;
+	-webkit-align-items: center;
 	justify-content: center;
+	-webkit-justify-content: center;
 }
 #list-wraper .listItem:first-child{
 	border-top: 1px solid #F7F7F7;
@@ -140,6 +143,7 @@ nav.mui-nav{
 }
 .moneyContainer{
 	flex: 1;
+	-webkit-flex: 1;
 	text-align: right;
 	line-height: 52px;
 	color: #151515;
