@@ -28,7 +28,12 @@ $(function() {
             })
             // @todo  点击每一条数据，跳转到相应的详情页
         mui("#listContainer").on('tap', "li", function() {
-            alert('此处，传参跳转到单据详情页')
+            var billtypename = $(this).attr("typename")
+            var pa = {};
+            pa.billid = $(this).attr("id");
+            pa.billtype = $(this).attr("type");
+            pa.billtypename = billtypename;
+            openBillCard(pa)
         })
     }
 

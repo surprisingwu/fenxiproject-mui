@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-	<meta charset="UTF-8">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="../css/mui.css"/>
-	<link rel="stylesheet" href="../css/listpage.css">
-	<script src="../../../newProject/fenxiproject/js/listspage.js"></script>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/mui.css" />
+    <link rel="stylesheet" href="../css/listpage.css">
 </head>
+
 <body>
-	<header class="mui-bar mui-bar-nav">
-	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-	    <h1 class="mui-title">单据列表</h1>
-	    <span class="checkOperation">查询</span>
-	</header>
-	<div class="mui-content mui-scroll-wrapper" id="pullrefresh">
-	    <div class="mui-scroll">
-			<div class="mui-table-view mui-table-view-chevron">
-				<ul class="mui-table-view" id="listContainer">
-				</ul>
-			</div>
-	    </div>
-	</div>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">单据列表</h1>
+        <span class="checkOperation">查询</span>
+    </header>
+    <div class="mui-content mui-scroll-wrapper" id="pullrefresh">
+        <div class="mui-scroll">
+            <div class="mui-table-view mui-table-view-chevron">
+                <ul class="mui-table-view" id="listContainer">
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script id="listTemplate" type="text/x-dot-template">
-	{{ for (var i=0;i<it.length;i++ ){ }}
-	<li class="mui-table-view-cell">
-		<div class="listItemLef">
-			<div class="listItemTop">
-				<span class="listItemTop-left">{{=it[i].billtypename}}</span>
-				<span class="listItemTop-right">{{=it[i].djrq}}</span>
-			</div>
-			<div class="listItemBottom">
-				<span class="listItemBottom-left"> {{=it[i].userName}}</span>
-				<span class="listItemBottom-right">￥{{=it[i].total}}</span>
-			</div>
-		</div>
-		<i class="mui-icon mui-icon-forward"></i>
-	</li>
-	{{ } }}
+    {{ for (var i=0;i
+    <it.length;i++ ){ }} <li class="mui-table-view-cell" id="{{=it[i].billid}}" type="{{=it[i].billtype}}" typename="{{=it[i].billtypename}}">
+        <div class="listItemLef">
+            <div class="listItemTop">
+                <span class="listItemTop-left">{{=it[i].billtypename}}</span>
+                <span class="listItemTop-right">{{=it[i].djrq}}</span>
+            </div>
+            <div class="listItemBottom">
+                <span class="listItemBottom-left"> {{=it[i].userName}}</span>
+                <span class="listItemBottom-right">￥{{=it[i].total}}</span>
+            </div>
+        </div>
+        <i class="mui-icon mui-icon-forward"></i>
+        </li>
+        {{ } }}
 </script>
 <script src="../js/jquery.min.js"></script>
 <script src="../cordova.js"></script>
@@ -47,4 +48,5 @@
 <script src="../js/appsetting.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/doT.min.js"></script>
 <script src="../js/listspage.js"></script>
+
 </html>

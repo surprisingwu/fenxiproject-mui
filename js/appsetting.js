@@ -1,13 +1,50 @@
 /**
  * Created by 巫运廷 on 2017/7/11.
  */
-
 var appSettings = {};
 var RANDOMNUM = 0;
-appSettings.ip = "10.4.122.24"; //融资租赁
-//appSettings.ip = "10.15.0.94";//融资租赁
-appSettings.port = "8090"; //融资租赁
+appSettings.ip = "10.4.122.24";
+//appSettings.ip = "10.15.0.94";
+
+appSettings.port = "8090";
 appSettings.proxy = "http://" + appSettings.ip + ":" + appSettings.port;
+const MA_ClASS = '' //后台的controller
+    // data{handler: 'dada',controller:"eqeqwe",......}
+    // @todo  浏览器也可以进行调式
+function requestMa(data, sucess, err) {
+    var paramsObj = commonParams(data);
+    paramsObj.callback = callback;
+    paramsObj.error = callerr;
+    summer.callAction(paramsObj);
+
+    function callback(data) {
+        // @todo 对返回的数据进行预处理
+        sucess(data)
+    }
+
+    function callerr(err) {
+        err(err)
+    }
+}
+
+function commonParams(data) {
+    var tempObj = {};
+    tempObj.viewid = data.controller || "MA_ClASS";
+    tempObj.action = data.handler || "handler";
+    for (var key in data) {
+        if (key !== "controller" && key !== "handler") {
+            tempObj.params[key] = data[key];
+        }
+    }
+    return tempObj;
+}
+
+function setConfig() {
+    summer.writeConfig({
+        "host": appSettings.ip, //向configure中写入host键值
+        "port": appSettings.port //向configure中写入port键值
+    });
+}
 $_ajax = {
         _post: function(obj) {
             var paramsObj = {};
@@ -18,10 +55,6 @@ $_ajax = {
             paramsObj.viewid = obj.url;
             paramsObj.params = obj.data;
             paramsObj.action = obj.handler;
-            paramsObj.header = {
-                "Content-Type": "application/x-www-form-urlencoded",
-                "User-Agent": "imgfornote"
-            }
             paramsObj.callback = obj.success;
             paramsObj.error = obj.err;
             paramsObj.isalerterror = "true";
@@ -104,10 +137,11 @@ $.extend({
 
         })
         $("#closeTotast").on("click", function() {
-                $totast.hide();
-                offBindEvent();
-            })
-            //进行初始化，添加html
+            $totast.hide();
+            offBindEvent();
+        })
+
+        //进行初始化，添加html
         function init() {
             if ($("body").find("#totast").length > 0) {
                 return;
@@ -137,6 +171,7 @@ $.extend({
                 '</div>';
             $("body").append(htmlStr);
         }
+
         //对一些时间进行解绑
         function offBindEvent() {
             $("#totast .confirmBtn").off()
@@ -295,24 +330,27 @@ function setTotalData() {
     totalData.dimsmap = currentStateObj;
     localStorage.setItem("totalData", JSON.stringify(totalData))
 }
+
 //退出小应用的方法
 function functionback() {
     initLocal();
     closeWebApp();
 }
-//退出 webapp的方法
+
+// 退出 webapp的方法
 function closeWebApp() {
     cordova.exec(null, null, "WebAppPlugin", "CloseWebApp", [])
 }
-//与原生交互获取数据    加一个字段 调原生和ma
+
+// 与原生交互获取数据    加一个字段 调原生和ma
 function callService(sucess, err, params) {
     cordova.exec(sucess, err, "WebAppPlugin", "CallAction", [params])
 }
-
-function closeWebApp() {
-    cordova.exec(null, null, "WebAppPlugin", "CloseWebApp", [])
+// 打开卡片界面
+function openBillCard(params) {
+    cordova.exec(null, null, "WebAppPlugin", "openBillCardViewController", [params])
 }
-
+// 移除存储的数据
 function removeTotalData() {
     localStorage.removeItem("totalData");
 }
